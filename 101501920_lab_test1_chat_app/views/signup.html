@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Signup</h2>
+
+<input id="username" placeholder="Username">
+<input id="firstname" placeholder="First Name">
+<input id="lastname" placeholder="Last Name">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="signup()">Signup</button>
+
+<script>
+function signup(){
+    fetch("/signup",{
+        method:"POST",
+        headers:{ "Content-Type":"application/json"},
+        body:JSON.stringify({
+            username:username.value,
+            firstname:firstname.value,
+            lastname:lastname.value,
+            password:password.value
+        })
+    })
+    .then(res=>res.text())
+    .then(alert);
+}
+</script>
+
+</body>
+</html>

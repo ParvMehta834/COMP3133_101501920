@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+</head>
+
+<body>
+<button onclick="logout()">Logout</button>
+
+<select id="room">
+    <option value="cloud">Cloud</option>
+    <option value="devops">DevOps</option>
+    <option value="sports">Sports</option>
+</select>
+
+<button onclick="joinRoom()">Join</button>
+
+<hr>
+
+<div id="messages"></div>
+<div id="typing" style="color:gray;"></div>
+
+<input id="msg" placeholder="Type message">
+<button onclick="sendMsg()">Send</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/chat.js"></script>
+
+</body>
+</html>
